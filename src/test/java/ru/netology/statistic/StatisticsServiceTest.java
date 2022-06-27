@@ -19,5 +19,18 @@ public class StatisticsServiceTest {
 
             assertEquals(expected, actual);
          }
-    }
+
+    @Test
+    void findMaxAltArray() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {12, 5, 6, 3, 5, 6, 10, 3, 11, 11, 12};
+        long expected = 12;
+
+        long actual = service.findMax(incomesInBillions);
+
+        assertEquals(expected, actual);}
+
+
+}
 
